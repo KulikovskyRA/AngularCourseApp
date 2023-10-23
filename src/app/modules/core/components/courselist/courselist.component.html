@@ -2,6 +2,7 @@
   <app-coursecard
     *ngFor="let course of courses"
     [course]="course"
+    (edit)="editCourse($event)"
   ></app-coursecard>
 
   <div class="flex flex-row justify-content-center">

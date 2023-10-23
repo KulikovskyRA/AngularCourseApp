@@ -90,4 +90,8 @@ export class CourselistComponent implements OnInit {
   public loadMore(): void {
     console.log('loadMore');
   }
+
+  public editCourse(course: ICourse): void {
+    console.log(course.id);
+  }
 }

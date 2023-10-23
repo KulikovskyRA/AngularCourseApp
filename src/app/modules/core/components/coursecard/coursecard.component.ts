@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ICourse } from 'src/app/domain/course';
 
 @Component({
@@ -8,4 +8,9 @@ import { ICourse } from 'src/app/domain/course';
 })
 export class CoursecardComponent {
   @Input() public course: ICourse = {} as ICourse;
+  @Output() public edit: EventEmitter<ICourse> = new EventEmitter<ICourse>();
+
+  public editCourse(): void {
+    this.edit.emit(this.course);
+  }
 }
