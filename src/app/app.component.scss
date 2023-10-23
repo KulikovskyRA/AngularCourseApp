@@ -13,5 +13,5 @@ html {
 body {
   padding: 16px 56px 16px 56px;
   background-color: #e2e8f0;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
 }
