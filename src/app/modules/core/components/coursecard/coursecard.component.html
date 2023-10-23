@@ -2,10 +2,7 @@
   <div class="flex flex-row justify-content-between">
     <!-- Текст -->
     <p class="text-base w-9">
-      ОписаниеОписаниеОписаниеОписаниеОписаниеОписание
-      ОписаниеОписаниеОписаниеОписаниеОписаниеОписание
-      ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание
-      ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание
+      {{ course.description }}
     </p>
     <!-- Дата, длительность - строка 1, кнопки -строка 2 -->
     <div class="flex flex-column justify-content-between align-items-center">
@@ -15,12 +12,12 @@
           class="pi pi-clock"
           style="color: #708090; font-size: 0.8rem"
         ></span>
-        <p class="text-xs text-400">3 часа 30 минут</p>
+        <p class="text-xs text-400">{{ course.duration }} минут</p>
         <span
           class="pi pi-calendar"
           style="color: #708090; font-size: 0.8rem"
         ></span>
-        <p class="text-xs text-400">31 марта 2023 года</p>
+        <p class="text-xs text-400">{{ course.creationDate }}</p>
       </div>
       <!-- 2 -->
       <div class="flex flex-row gap-5 pr-5">
