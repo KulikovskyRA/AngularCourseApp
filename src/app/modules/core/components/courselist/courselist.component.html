@@ -3,4 +3,13 @@
     *ngFor="let course of courses"
     [course]="course"
   ></app-coursecard>
+
+  <div class="flex flex-row justify-content-center">
+    <p-button
+      [outlined]="true"
+      label="Загрузить еще"
+      severity="secondary"
+      (click)="loadMore()"
+    ></p-button>
+  </div>
 </div>
