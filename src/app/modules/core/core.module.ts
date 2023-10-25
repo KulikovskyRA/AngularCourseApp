@@ -13,7 +13,7 @@ import { CardModule } from 'primeng/card';
 import { CreationDateCheckDirective } from './directives/creation-date-check.directive';
 
 import '@angular/common/locales/global/ru';
-import { DurationDirective } from './pipes/duration.directive';
+import { DurationPipe } from './pipes/duration.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { DurationDirective } from './pipes/duration.directive';
     CoursecardComponent,
     CourselistComponent,
     CreationDateCheckDirective,
-    DurationDirective,
+
+    DurationPipe,
   ],
   imports: [CommonModule, InputTextModule, ButtonModule, CardModule],
   exports: [
