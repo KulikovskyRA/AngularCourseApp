@@ -29,7 +29,9 @@
           class="pi pi-calendar"
           style="color: #708090; font-size: 0.8rem"
         ></span>
-        <p class="text-xs text-400">{{ course.creationDate }}</p>
+        <p class="text-xs text-400">
+          {{ course.creationDate | date : "longDate" : "+3" : "ru" }}
+        </p>
       </div>
       <!-- 2 -->
       <div class="flex flex-row gap-5 pr-5">

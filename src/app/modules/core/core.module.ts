@@ -12,6 +12,8 @@ import { CourselistComponent } from './components/courselist/courselist.componen
 import { CardModule } from 'primeng/card';
 import { CreationDateCheckDirective } from './directives/creation-date-check.directive';
 
+import '@angular/common/locales/global/ru';
+
 @NgModule({
   declarations: [
     HeaderComponent,
