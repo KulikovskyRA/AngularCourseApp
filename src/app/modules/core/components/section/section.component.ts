@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-section',
@@ -6,12 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./section.component.scss'],
 })
 export class SectionComponent {
+  @Output() public valueEmit: EventEmitter<string> = new EventEmitter<string>();
+
   value = '';
+
   setValue(event: any) {
     this.value = event.target.value;
   }
 
   logValue() {
-    console.log(this.value);
+    // console.log(this.value);
+    this.valueEmit.emit(this.value);
   }
 }

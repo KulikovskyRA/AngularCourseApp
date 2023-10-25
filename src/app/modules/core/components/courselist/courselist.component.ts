@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ICourse } from 'src/app/domain/course';
 
+import { FilterPipe } from '../../pipes/filter.pipe';
+
 @Component({
   selector: 'app-courselist',
   templateUrl: './courselist.component.html',
   styleUrls: ['./courselist.component.scss'],
+  providers: [FilterPipe],
 })
 export class CourselistComponent implements OnInit {
   public courses: ICourse[] = [];
@@ -99,5 +102,18 @@ export class CourselistComponent implements OnInit {
 
   public editCourse(course: ICourse): void {
     console.log(course.id);
+  }
+  constructor(private filter: FilterPipe) {}
+
+  public searchText = '';
+  public filteredCourses: ICourse[] = [];
+
+  onButtonSearchClicked(valueEmit: string) {
+    this.searchText = valueEmit;
+    console.log(this.searchText);
+
+    this.filteredCourses = this.filter.transform(this.courses, this.searchText);
+
+    console.log(this.filteredCourses);
   }
 }
