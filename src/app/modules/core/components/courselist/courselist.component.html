@@ -1,6 +1,6 @@
 <div *ngIf="courses.length; else zeroCourses" class="flex flex-column gap-3">
   <app-coursecard
-    *ngFor="let course of courses"
+    *ngFor="let course of courses | orderBy : 'creationDate'"
     [course]="course"
     (edit)="editCourse($event)"
   ></app-coursecard>

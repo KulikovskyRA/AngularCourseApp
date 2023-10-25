@@ -14,6 +14,7 @@ import { CreationDateCheckDirective } from './directives/creation-date-check.dir
 
 import '@angular/common/locales/global/ru';
 import { DurationPipe } from './pipes/duration.pipe';
+import { OrderByPipe } from './pipes/order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,8 @@ import { DurationPipe } from './pipes/duration.pipe';
     CoursecardComponent,
     CourselistComponent,
     CreationDateCheckDirective,
-
     DurationPipe,
+    OrderByPipe,
   ],
   imports: [CommonModule, InputTextModule, ButtonModule, CardModule],
   exports: [
