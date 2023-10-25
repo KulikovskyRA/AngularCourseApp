@@ -10,6 +10,7 @@ import { ButtonModule } from 'primeng/button';
 import { CoursecardComponent } from './components/coursecard/coursecard.component';
 import { CourselistComponent } from './components/courselist/courselist.component';
 import { CardModule } from 'primeng/card';
+import { CreationDateCheckDirective } from './directives/creation-date-check.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CardModule } from 'primeng/card';
     SectionComponent,
     CoursecardComponent,
     CourselistComponent,
+    CreationDateCheckDirective,
   ],
   imports: [CommonModule, InputTextModule, ButtonModule, CardModule],
   exports: [

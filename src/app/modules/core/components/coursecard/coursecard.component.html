@@ -1,4 +1,16 @@
-<p-card [header]="course.title | titlecase">
+<p-card
+  [appCreationDateCheck]="course.creationDate.toString()"
+  [ngClass]="{ 'is-topRated': course.topRated }"
+>
+  <div class="flex flex-row justify-content-start gap-4">
+    <p class="text-4xl text-bold">{{ course.title | titlecase }}</p>
+    <i
+      *ngIf="course.topRated"
+      class="pi pi-star-fill pt-2"
+      style="font-size: 1.5rem"
+    ></i>
+  </div>
+
   <div class="flex flex-row justify-content-between">
     <!-- Текст -->
     <p class="text-base w-9">

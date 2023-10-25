@@ -9,3 +9,9 @@
   border-radius: 8px;
   height: 144px;
 }
+
+::ng-deep .is-topRated {
+  .p-card {
+    background-color: var(--blue-100);
+  }
+}
