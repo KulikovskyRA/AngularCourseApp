@@ -16,7 +16,7 @@ export class CourselistComponent implements OnInit {
         title: 'aboba1',
         creationDate: new Date('1980-01-30T00:00:00.000Z'),
         //moment('1980-01-30T00:00:00.000Z').format('MM-DD-YYYY'),
-        duration: 10,
+        duration: 100,
         topRated: false,
         description:
           'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.',
@@ -27,7 +27,7 @@ export class CourselistComponent implements OnInit {
         title: 'aboba2',
         creationDate: new Date(),
         //moment(new Date()).format('MM-DD-YYYY'),
-        duration: 10,
+        duration: 5670,
         description:
           'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.',
       },
@@ -38,7 +38,7 @@ export class CourselistComponent implements OnInit {
         title: 'aboba3',
         creationDate: new Date('2023-11-30T00:00:00.000Z'),
         // moment('2023-11-30T00:00:00.000Z').format('MM-DD-YYYY'),
-        duration: 10,
+        duration: 220,
         description:
           'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.',
       },
