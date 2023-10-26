@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ICourse } from 'src/app/domain/course';
-import { CoursesserviceService } from 'src/app/services/coursesservice.service';
+import { CoursesserviceService } from 'src/app/services/courses-service.service';
 
 import { ConfirmationService } from 'primeng/api';
 
@@ -27,9 +27,9 @@ export class CoursecardComponent {
 
   public deleteConfirm(): void {
     this.confirmationService.confirm({
-      message: 'Are you sure that you want to proceed?',
-      header: 'Confirmation',
-      // icon: 'pi pi-exclamation-triangle',
+      message: 'Вы действительно хотите удалить этот курс?',
+      header: 'Подтвердите действие',
+      icon: 'pi pi-exclamation-triangle',
       accept: () => {
         this.deleteCourse();
       },

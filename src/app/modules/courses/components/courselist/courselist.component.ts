@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ICourse } from 'src/app/domain/course';
 
 import { FilterPipe } from '../../pipes/filter.pipe';
-import { CoursesserviceService } from 'src/app/services/coursesservice.service';
+import { CoursesserviceService } from 'src/app/services/courses-service.service';
 
 @Component({
   selector: 'app-courselist',
