@@ -9,6 +9,7 @@
       *ngFor="let course of filteredCourses | orderBy : 'creationDate'"
       [course]="course"
       (edit)="editCourse($event)"
+      (delete)="deleteCourse($event)"
     ></app-coursecard>
 
     <div class="flex flex-row justify-content-center">
