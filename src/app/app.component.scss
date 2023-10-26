@@ -13,8 +13,6 @@ html {
 body {
   padding: 16px 56px 16px 56px;
   background-color: #e2e8f0;
-  min-height: calc(100vh - 100px);
-  width: 100%;
-  // margin-left: -50px;
-  // margin-right: -500px;
+  min-height: calc(100vh - 120px);
+  width: 100% -100px;
 }

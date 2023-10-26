@@ -10,10 +10,16 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 
 import '@angular/common/locales/global/ru';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, LogoComponent],
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    LogoComponent,
+    LoginFormComponent,
+  ],
   imports: [CommonModule, InputTextModule, ButtonModule, CardModule],
-  exports: [HeaderComponent, FooterComponent],
+  exports: [HeaderComponent, FooterComponent, LoginFormComponent],
 })
 export class CoreModule {}
