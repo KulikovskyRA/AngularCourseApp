@@ -28,7 +28,13 @@ import { CardModule } from 'primeng/card';
     OrderByPipe,
     FilterPipe,
   ],
-  imports: [CommonModule, InputTextModule, ButtonModule, CardModule],
+  imports: [
+    CommonModule,
+    InputTextModule,
+    ButtonModule,
+    CardModule,
+    ConfirmDialogModule,
+  ],
 
   exports: [BreadcrumbsComponent, SectionComponent, CourselistComponent],
 })

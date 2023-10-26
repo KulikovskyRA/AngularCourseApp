@@ -47,10 +47,11 @@
           [rounded]="true"
           [text]="true"
           severity="danger"
-          (click)="deleteCourse()"
+          (click)="deleteConfirm()"
         ></p-button>
-        <!-- <p-confirmDialog [style]="{ width: '50vw' }"></p-confirmDialog> -->
       </div>
     </div>
   </div>
 </p-card>
+
+<p-confirmDialog [style]="{ width: '50vw' }"></p-confirmDialog>
