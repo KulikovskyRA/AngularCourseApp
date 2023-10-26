@@ -10,12 +10,12 @@ import { ButtonModule } from 'primeng/button';
 import { CoursecardComponent } from '../courses/components/coursecard/coursecard.component';
 import { CourselistComponent } from '../courses/components/courselist/courselist.component';
 import { CardModule } from 'primeng/card';
-import { CreationDateCheckDirective } from './directives/creation-date-check.directive';
+import { CreationDateCheckDirective } from '../courses/directives/creation-date-check.directive';
 
 import '@angular/common/locales/global/ru';
-import { DurationPipe } from './pipes/duration.pipe';
-import { OrderByPipe } from './pipes/order-by.pipe';
-import { FilterPipe } from './pipes/filter.pipe';
+import { DurationPipe } from '../courses/pipes/duration.pipe';
+import { OrderByPipe } from '../courses/pipes/order-by.pipe';
+import { FilterPipe } from '../courses/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
