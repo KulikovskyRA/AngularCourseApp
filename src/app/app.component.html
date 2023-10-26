@@ -1,5 +1,5 @@
 <app-header></app-header>
-<body class="flex flex-column gap-4">
+<body class="flex flex-column gap-4 align-items-center justify-content-center">
   <app-courselist *ngIf="authStatus"></app-courselist>
   <app-login-form *ngIf="authStatus === false"></app-login-form>
 </body>
