@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
-import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
-import { SectionComponent } from './components/section/section.component';
+import { BreadcrumbsComponent } from '../courses/components/breadcrumbs/breadcrumbs.component';
+import { SectionComponent } from '../courses/components/section/section.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-import { CoursecardComponent } from './components/coursecard/coursecard.component';
-import { CourselistComponent } from './components/courselist/courselist.component';
+import { CoursecardComponent } from '../courses/components/coursecard/coursecard.component';
+import { CourselistComponent } from '../courses/components/courselist/courselist.component';
 import { CardModule } from 'primeng/card';
 import { CreationDateCheckDirective } from './directives/creation-date-check.directive';
 
