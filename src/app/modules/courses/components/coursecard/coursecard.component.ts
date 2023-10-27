@@ -17,6 +17,7 @@ export class CoursecardComponent {
   ) {}
 
   @Input() public course: ICourse = {} as ICourse;
+
   @Output() public edit: EventEmitter<ICourse> = new EventEmitter<ICourse>();
 
   @Output() public delete: EventEmitter<ICourse> = new EventEmitter<ICourse>();

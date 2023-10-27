@@ -1,13 +1,27 @@
 <p-card header="Вход" [style]="{ width: '360px' }">
   <div class="flex flex-column gap-3">
     <label htmlFor="username">Логин*</label>
-    <input pInputText id="username" aria-describedby="username-help" />
+    <input
+      (keyup)="setUserData($event)"
+      pInputText
+      id="username"
+      name="username"
+      [value]="userData.username"
+      aria-describedby="username-help"
+    />
+
     <label htmlFor="password">Пароль*</label>
-    <input pInputText id="password" aria-describedby="password-help" />
+    <input
+      (keyup)="setUserData($event)"
+      pInputText
+      id="password"
+      name="password"
+      aria-describedby="password-help"
+    />
 
     <div class="flex flex-row justify-content-between">
       <p-button [text]="true" label="Забыли пароль?"></p-button>
-      <p-button label="Войти"></p-button>
+      <p-button label="Войти" (click)="logUserData()"></p-button>
     </div>
   </div>
 </p-card>

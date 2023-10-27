@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ICourse } from './domain/course';
+import { Component } from '@angular/core';
+
 import { AuthserviceService } from './services/auth-service.service';
 
 @Component({
@@ -11,4 +11,15 @@ export class AppComponent {
   constructor(private readonly authService: AuthserviceService) {}
 
   public authStatus = this.authService.isAuthenticated();
+
+  userLogin(event: any) {
+    const { username, password } = event;
+    this.authService.login(username, password);
+    this.authStatus = this.authService.isAuthenticated();
+  }
+
+  userLogout() {
+    this.authService.logout();
+    this.authStatus = this.authService.isAuthenticated();
+  }
 }

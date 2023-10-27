@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
 
+import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 
@@ -19,7 +20,13 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     LogoComponent,
     LoginFormComponent,
   ],
-  imports: [CommonModule, InputTextModule, ButtonModule, CardModule],
+  imports: [
+    CommonModule,
+    InputTextModule,
+    ButtonModule,
+    CardModule,
+    PasswordModule,
+  ],
   exports: [HeaderComponent, FooterComponent, LoginFormComponent],
 })
 export class CoreModule {}
