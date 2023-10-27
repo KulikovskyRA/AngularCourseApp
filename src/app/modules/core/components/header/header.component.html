@@ -1,0 +1,16 @@
+<div class="head flex flex-row justify-content-between">
+  <app-logo></app-logo>
+  <div *ngIf="authStatus" class="flex flex-row gap-3 my-auto text-xl">
+    <i class="pi pi-user pt-2" style="font-size: 24px"></i>
+    <p class="my-auto">Бильбо Сумкин</p>
+
+    <p-button
+      icon="pi pi-sign-out"
+      label="Выход"
+      [text]="true"
+      (click)="logUserLogout()"
+    ></p-button>
+    <!-- <i class="pi pi-sign-out" style="font-size: 24px"></i>
+    <p class="my-auto">Выход</p> -->
+  </div>
+</div>
