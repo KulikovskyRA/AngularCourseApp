@@ -1,9 +1,14 @@
+<app-card-create></app-card-create>
+
 <app-header (userLogoutEmit)="userLogout()"></app-header>
-<body class="flex flex-column gap-4 align-items-center justify-content-center">
-  <app-courselist *ngIf="authStatus"></app-courselist>
-  <app-login-form
-    *ngIf="authStatus === false"
-    (userDataEmit)="userLogin($event)"
-  ></app-login-form>
+<body
+  *ngIf="authStatus === false"
+  class="flex flex-column justify-content-center align-items-center"
+>
+  <app-login-form (userDataEmit)="userLogin($event)"></app-login-form>
+</body>
+
+<body *ngIf="authStatus">
+  <app-courselist></app-courselist>
 </body>
 <app-footer></app-footer>

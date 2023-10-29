@@ -22,6 +22,7 @@ export class CourselistComponent implements OnInit {
   ngOnInit(): void {
     this.courses = this.coursesService.getList();
     this.filteredCourses = this.courses;
+    console.log(this.courses);
   }
 
   public loadMore(): void {

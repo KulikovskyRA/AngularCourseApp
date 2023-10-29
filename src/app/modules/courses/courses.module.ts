@@ -16,6 +16,11 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { CardCreateComponent } from './components/card-create/card-create.component';
+import { FormsModule } from '@angular/forms';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -27,6 +32,7 @@ import { CardModule } from 'primeng/card';
     DurationPipe,
     OrderByPipe,
     FilterPipe,
+    CardCreateComponent,
   ],
   imports: [
     CommonModule,
@@ -34,8 +40,17 @@ import { CardModule } from 'primeng/card';
     ButtonModule,
     CardModule,
     ConfirmDialogModule,
+    FormsModule,
+    InputTextareaModule,
+    InputNumberModule,
+    CalendarModule,
   ],
 
-  exports: [BreadcrumbsComponent, SectionComponent, CourselistComponent],
+  exports: [
+    BreadcrumbsComponent,
+    SectionComponent,
+    CourselistComponent,
+    CardCreateComponent,
+  ],
 })
 export class CoursesModule {}
