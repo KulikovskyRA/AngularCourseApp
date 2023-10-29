@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { ICourse } from 'src/app/domain/course';
 import { CoursesserviceService } from 'src/app/services/courses-service.service';
 
@@ -9,6 +15,7 @@ import { ConfirmationService } from 'primeng/api';
   templateUrl: './coursecard.component.html',
   styleUrls: ['./coursecard.component.scss'],
   providers: [ConfirmationService],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CoursecardComponent {
   constructor(
