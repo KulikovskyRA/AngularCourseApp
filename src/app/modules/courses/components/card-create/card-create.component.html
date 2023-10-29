@@ -1,0 +1,40 @@
+<div class="flex flex-column gap-3 p-8">
+  <label htmlFor="title">Наименование*</label>
+  <input [(ngModel)]="newCourse.title" pInputText id="title" />
+  <label htmlFor="description">Описание*</label>
+  <textarea
+    [(ngModel)]="newCourse.description"
+    pInputTextarea
+    id="description"
+    rows="5"
+    cols="30"
+  ></textarea>
+
+  <label htmlFor="duration">Длительность*</label>
+  <div class="flex flex-row gap-3">
+    <p-inputNumber
+      class="inputNumberWidth"
+      [showButtons]="true"
+      [min]="0"
+      [max]="10000000"
+      id="duration"
+      [(ngModel)]="newCourse.duration"
+    >
+    </p-inputNumber>
+    <p>{{ newCourse.duration | duration }}</p>
+  </div>
+  <label htmlFor="creationDate">Время создания</label>
+  <p-calendar
+    id="creationDate"
+    [(ngModel)]="newCourse.creationDate"
+  ></p-calendar>
+  <div>Авторы заглушка</div>
+  <div class="flex flex-row gap-3">
+    <p-button
+      label="Отмена"
+      severity="danger"
+      (click)="cancelCreation()"
+    ></p-button>
+    <p-button label="Сохранить" (click)="createCourse()"></p-button>
+  </div>
+</div>
