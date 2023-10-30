@@ -4,11 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './modules/core/components/not-found/not-found.component';
 import { LoginFormComponent } from './modules/core/components/login-form/login-form.component';
 
+import { AppComponent } from './app.component';
+
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: '',
+    component: AppComponent,
   },
   { path: 'login', component: LoginFormComponent },
   {

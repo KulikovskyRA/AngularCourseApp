@@ -5,12 +5,14 @@ import { CourselistComponent } from './components/courselist/courselist.componen
 import { CardCreateComponent } from './components/card-create/card-create.component';
 import { BodyComponent } from './components/body/body.component';
 import { CardEditComponent } from './components/card-edit/card-edit.component';
+import { authGuard } from 'src/app/auth.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/courses' },
   {
     path: '',
     component: BodyComponent,
+    canActivate: [authGuard],
     children: [
       { path: 'courses', component: CourselistComponent },
       { path: 'courses/:id', component: CardEditComponent },
