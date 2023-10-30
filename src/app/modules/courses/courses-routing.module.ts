@@ -12,6 +12,7 @@ const routes: Routes = [
     component: BodyComponent,
     children: [
       { path: 'courses', component: CourselistComponent },
+      { path: 'courses/:id', component: CardCreateComponent },
       {
         path: 'new',
         component: CardCreateComponent,

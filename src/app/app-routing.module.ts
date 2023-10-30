@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './modules/core/components/not-found/not-found.component';
+import { LoginFormComponent } from './modules/core/components/login-form/login-form.component';
 
 const routes: Routes = [
   {
@@ -9,6 +10,7 @@ const routes: Routes = [
     pathMatch: 'full',
     redirectTo: '',
   },
+  { path: 'login', component: LoginFormComponent },
   {
     path: '**',
     component: NotFoundComponent,
