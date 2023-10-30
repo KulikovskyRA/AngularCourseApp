@@ -8,10 +8,13 @@ import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 
+import { TabMenuModule } from 'primeng/tabmenu';
+
 import { CardModule } from 'primeng/card';
 
 import '@angular/common/locales/global/ru';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     FooterComponent,
     LogoComponent,
     LoginFormComponent,
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,
@@ -26,6 +30,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     ButtonModule,
     CardModule,
     PasswordModule,
+    TabMenuModule,
   ],
   exports: [HeaderComponent, FooterComponent, LoginFormComponent],
 })

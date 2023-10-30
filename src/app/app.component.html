@@ -1,7 +1,9 @@
-<app-card-create></app-card-create>
+<!-- <app-card-create></app-card-create> -->
 
 <app-header (userLogoutEmit)="userLogout()"></app-header>
-<body
+<router-outlet></router-outlet>
+
+<!-- <body
   *ngIf="authStatus === false"
   class="flex flex-column justify-content-center align-items-center"
 >
@@ -10,5 +12,5 @@
 
 <body *ngIf="authStatus">
   <app-courselist></app-courselist>
-</body>
+</body> -->
 <app-footer></app-footer>

@@ -21,6 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
+import { CoursesRoutingModule } from './courses-routing.module';
+import { BodyComponent } from './components/body/body.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { CalendarModule } from 'primeng/calendar';
     OrderByPipe,
     FilterPipe,
     CardCreateComponent,
+    BodyComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +47,7 @@ import { CalendarModule } from 'primeng/calendar';
     InputTextareaModule,
     InputNumberModule,
     CalendarModule,
+    CoursesRoutingModule,
   ],
 
   exports: [
