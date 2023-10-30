@@ -8,8 +8,9 @@ import { AuthserviceService } from 'src/app/services/auth-service.service';
   styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent {
-  @Output() public userDataEmit: EventEmitter<object> =
-    new EventEmitter<object>();
+  // @Output() public userDataEmit: EventEmitter<object> =
+  //   new EventEmitter<object>();
+
   userData = { username: '', password: '' };
 
   constructor(
@@ -26,7 +27,7 @@ export class LoginFormComponent {
 
   logUserData(): void {
     this.authService.login(this.userData.username, this.userData.password);
-    this.userDataEmit.emit(this.userData);
+    // this.userDataEmit.emit(this.userData);
     this.router.navigateByUrl('/courses');
   }
 }

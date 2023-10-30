@@ -29,9 +29,9 @@ export class CoursecardComponent {
 
   @Output() public delete: EventEmitter<ICourse> = new EventEmitter<ICourse>();
 
-  public editCourse(): void {
-    this.edit.emit(this.course);
-  }
+  // public editCourse(): void {
+  //   this.edit.emit(this.course);
+  // }
 
   public deleteConfirm(): void {
     this.confirmationService.confirm({

@@ -35,12 +35,15 @@
       </div>
       <!-- 2 -->
       <div class="flex flex-row gap-5 pr-5">
-        <p-button
-          icon="pi pi-pencil"
-          [rounded]="true"
-          [text]="true"
-          (click)="editCourse()"
-        ></p-button>
+        <a routerLink="{{ course.id }}" routerLinkActive="active"
+          ><p-button
+            icon="pi pi-pencil"
+            [rounded]="true"
+            [text]="true"
+          ></p-button
+        ></a>
+
+        <!-- (click)="editCourse()" -->
 
         <p-button
           icon="pi pi-trash"

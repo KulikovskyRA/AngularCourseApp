@@ -29,9 +29,9 @@ export class CourselistComponent implements OnInit {
     console.log('loadMore');
   }
 
-  public editCourse(course: ICourse): void {
-    console.log(course.id);
-  }
+  // public editCourse(course: ICourse): void {
+  //   console.log(course.id);
+  // }
 
   public deleteCourse(course: ICourse): void {
     this.courses = this.coursesService.removeItem(course.id);

@@ -8,8 +8,8 @@ import { AuthserviceService } from 'src/app/services/auth-service.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  @Output() public userLogoutEmit: EventEmitter<null> =
-    new EventEmitter<null>();
+  // @Output() public userLogoutEmit: EventEmitter<null> =
+  //   new EventEmitter<null>();
 
   public authStatus = this.authService.isAuthenticated();
 
@@ -19,9 +19,14 @@ export class HeaderComponent {
   ) {}
 
   logUserLogout() {
-    this.userLogoutEmit.emit();
+    // this.userLogoutEmit.emit();
     this.authService.logout();
     this.authStatus = this.authService.isAuthenticated();
     this.router.navigateByUrl('/login');
   }
+
+  // check() {
+  //   this.authStatus = this.authService.isAuthenticated();
+  //   console.log('efwefwf');
+  // }
 }
