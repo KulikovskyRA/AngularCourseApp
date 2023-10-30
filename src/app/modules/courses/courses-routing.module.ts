@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CourselistComponent } from './components/courselist/courselist.component';
 import { CardCreateComponent } from './components/card-create/card-create.component';
 import { BodyComponent } from './components/body/body.component';
+import { CardEditComponent } from './components/card-edit/card-edit.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/courses' },
@@ -12,7 +13,7 @@ const routes: Routes = [
     component: BodyComponent,
     children: [
       { path: 'courses', component: CourselistComponent },
-      { path: 'courses/:id', component: CardCreateComponent },
+      { path: 'courses/:id', component: CardEditComponent },
       {
         path: 'new',
         component: CardCreateComponent,

@@ -94,13 +94,14 @@ export class CoursesserviceService {
 
   public createCourse() {}
 
-  public getItemById() {}
+  public getItemById(id: number) {
+    return this.courses.find((obj) => obj.id === id);
+  }
 
   public updateItem() {}
 
   public removeItem(itemID: number) {
     this.courses = this.courses.filter((el) => el.id != itemID);
-    // console.log(this.courses);
     return this.courses;
   }
 }

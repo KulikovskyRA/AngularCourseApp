@@ -1,11 +1,15 @@
 <div class="flex flex-column justify-content-center align-items-center gap-2">
-  <p-card header="Cоздать курс" [style]="{ width: '820px' }">
+  <p-card
+    header="Изменить курс {{ editCourse.id }}"
+    title="Создать курс"
+    [style]="{ width: '820px' }"
+  >
     <div class="flex flex-column gap-3">
       <label htmlFor="title">Наименование:*</label>
-      <input [(ngModel)]="newCourse.title" pInputText id="title" />
+      <input [(ngModel)]="editCourse.title" pInputText id="title" />
       <label htmlFor="description">Описание:*</label>
       <textarea
-        [(ngModel)]="newCourse.description"
+        [(ngModel)]="editCourse.description"
         pInputTextarea
         id="description"
         rows="5"
@@ -22,17 +26,17 @@
               [min]="0"
               [max]="10000000"
               id="duration"
-              [(ngModel)]="newCourse.duration"
+              [(ngModel)]="editCourse.duration"
             >
             </p-inputNumber>
-            <p>{{ newCourse.duration | duration }}</p>
+            <p>{{ editCourse.duration | duration }}</p>
           </div>
         </div>
         <div class="flex flex-column gap-3">
           <label htmlFor="creationDate">Время создания:</label>
           <p-calendar
             id="creationDate"
-            [(ngModel)]="newCourse.creationDate"
+            [(ngModel)]="editCourse.creationDate"
           ></p-calendar>
         </div>
       </div>

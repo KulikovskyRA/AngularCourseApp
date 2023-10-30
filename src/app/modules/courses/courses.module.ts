@@ -23,6 +23,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
 import { CoursesRoutingModule } from './courses-routing.module';
 import { BodyComponent } from './components/body/body.component';
+import { CardEditComponent } from './components/card-edit/card-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { BodyComponent } from './components/body/body.component';
     FilterPipe,
     CardCreateComponent,
     BodyComponent,
+    CardEditComponent,
   ],
   imports: [
     CommonModule,

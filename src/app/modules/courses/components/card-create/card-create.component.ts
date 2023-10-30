@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ICourse } from 'src/app/domain/course';
 
 @Component({
@@ -8,6 +9,8 @@ import { ICourse } from 'src/app/domain/course';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardCreateComponent {
+  constructor(private router: Router) {}
+
   newCourse: ICourse = {
     id: 0,
     title: '',
@@ -18,7 +21,8 @@ export class CardCreateComponent {
   };
 
   cancelCreation() {
-    console.log('CreationCancelled');
+    // console.log('CreationCancelled');
+    this.router.navigateByUrl('/');
   }
   createCourse() {
     console.log('createCourse');
