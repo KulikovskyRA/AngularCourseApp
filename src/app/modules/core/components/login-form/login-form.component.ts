@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthserviceService } from 'src/app/services/auth-service.service';
 
 @Component({
   selector: 'app-login-form',
@@ -10,16 +12,21 @@ export class LoginFormComponent {
     new EventEmitter<object>();
   userData = { username: '', password: '' };
 
+  constructor(
+    private router: Router,
+    private readonly authService: AuthserviceService
+  ) {}
+
   setUserData(event: any) {
     this.userData = {
       ...this.userData,
       [event.target.name]: event.target.value,
     };
-    // console.log(this.userData);
   }
 
   logUserData(): void {
+    this.authService.login(this.userData.username, this.userData.password);
     this.userDataEmit.emit(this.userData);
-    // console.log('emit');
+    this.router.navigateByUrl('/courses');
   }
 }

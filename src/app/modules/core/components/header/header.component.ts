@@ -1,12 +1,5 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnChanges,
-  OnInit,
-  Output,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthserviceService } from 'src/app/services/auth-service.service';
 
 @Component({
@@ -14,21 +7,21 @@ import { AuthserviceService } from 'src/app/services/auth-service.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnChanges {
+export class HeaderComponent {
   @Output() public userLogoutEmit: EventEmitter<null> =
     new EventEmitter<null>();
 
-  @Input() public authStatus: boolean =
-    this.authService.isAuthenticated() as boolean;
+  public authStatus = this.authService.isAuthenticated();
 
-  constructor(private readonly authService: AuthserviceService) {}
-
-  ngOnChanges(_changes: SimpleChanges): void {
-    this.authStatus = this.authService.isAuthenticated();
-  }
+  constructor(
+    private router: Router,
+    private readonly authService: AuthserviceService
+  ) {}
 
   logUserLogout() {
     this.userLogoutEmit.emit();
+    this.authService.logout();
     this.authStatus = this.authService.isAuthenticated();
+    this.router.navigateByUrl('/login');
   }
 }
