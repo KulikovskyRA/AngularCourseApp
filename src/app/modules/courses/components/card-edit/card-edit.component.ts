@@ -17,7 +17,7 @@ export class CardEditComponent {
     private readonly coursesService: CoursesserviceService
   ) {}
 
-  public id: number = Number(this.route.snapshot.params['id']);
+  public id = Number(this.route.snapshot.params['id']);
 
   editCourse: ICourse = {
     id: 0,
@@ -40,7 +40,8 @@ export class CardEditComponent {
     this.router.navigateByUrl('/');
   }
   createCourse() {
-    console.log('createCourse');
+    console.log('editCourse');
     console.log(this.editCourse);
+    this.router.navigateByUrl('/');
   }
 }

@@ -1,6 +1,13 @@
 <div class="breaddiv flex flex-row">
   <div class="my-auto flex flex-row gap-3">
     <i class="pi pi-home" style="font-size: 24px"></i>
-    <div class="text-xl">Курсы</div>
+    <div *ngIf="title === ''; else hasTitle" class="text-xl">Курсы</div>
+    <ng-template #hasTitle>
+      <div class="text-xl flex flex-row gap-1">
+        <a routerLink="/" routerLinkActive="active">Курсы</a>
+        <i class="pi my-auto pi-angle-right" style="color: black"></i>
+        <div>{{ title }}</div>
+      </div>
+    </ng-template>
   </div>
 </div>

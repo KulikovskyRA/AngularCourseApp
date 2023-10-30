@@ -27,5 +27,6 @@ export class CardCreateComponent {
   createCourse() {
     console.log('createCourse');
     console.log(this.newCourse);
+    this.router.navigateByUrl('/');
   }
 }
