@@ -1,0 +1,17 @@
+<div class="flex flex-row justify-content-between">
+  <div class="flex gap-2">
+    <span class="p-input-icon-right">
+      <i class="pi pi-search"></i>
+      <input
+        type="text"
+        [(ngModel)]="value"
+        pInputText
+        (keyup)="setValue($event)"
+      />
+    </span>
+    <p-button label="Поиск" severity="help" (click)="logValue()"></p-button>
+  </div>
+  <a routerLink="/new" routerLinkActive="active"
+    ><p-button label="Создать" icon="pi pi-plus"></p-button
+  ></a>
+</div>
