@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthserviceService } from 'src/app/services/auth-service.service';
 
@@ -11,12 +18,17 @@ export class HeaderComponent {
   // @Output() public userLogoutEmit: EventEmitter<null> =
   //   new EventEmitter<null>();
 
-  public authStatus = this.authService.isAuthenticated();
+  // @Input()
+  authStatus = this.authService.isAuthenticated();
 
   constructor(
     private router: Router,
     private readonly authService: AuthserviceService
   ) {}
+
+  // ngOnChanges(_changes: SimpleChanges): void {
+  //   this.authStatus = this.authService.isAuthenticated();
+  // }
 
   logUserLogout() {
     // this.userLogoutEmit.emit();
